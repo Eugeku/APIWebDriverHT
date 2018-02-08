@@ -1,4 +1,4 @@
-package com.epam.kuzora.hometask.model.bean;
+package com.epam.kuzora.hometask.model.bean.fakerestapi;
 
 public class Book {
 

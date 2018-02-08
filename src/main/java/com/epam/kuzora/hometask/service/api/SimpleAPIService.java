@@ -1,4 +1,4 @@
-package com.epam.kuzora.hometask.service;
+package com.epam.kuzora.hometask.service.api;
 
 import com.epam.kuzora.hometask.core.util.Logger;
 import com.epam.kuzora.hometask.service.exception.APIServiceException;
@@ -7,12 +7,12 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.impl.client.HttpClientBuilder;
 
-public class APIService {
-    public String apiParentUrl;
-    protected HttpUriRequest request;
-    protected HttpResponse httpResponse;
+public class SimpleAPIService {
+    private String apiParentUrl;
+    private HttpUriRequest request;
+    private HttpResponse httpResponse;
 
-    public APIService(String apiParentUrl) {
+    public SimpleAPIService(String apiParentUrl) {
         this.apiParentUrl = apiParentUrl;
     }
 

@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class StartGooglePage extends BasePage {
     @FindBy(xpath = "//div[2]/div/input")
     private WebElement fieldForInput;
+
     @FindBy(name = "btnK")
     private WebElement buttonConfirmName;
 
