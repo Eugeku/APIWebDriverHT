@@ -12,7 +12,6 @@ public class PageGenerator {
 
     public <TPage extends BasePage> TPage GetInstance(Class<TPage> pageClass) {
         try {
-            //Initialize the Page with its elements and return it.
             return PageFactory.initElements(driver, pageClass);
         } catch (Exception e) {
             e.printStackTrace();

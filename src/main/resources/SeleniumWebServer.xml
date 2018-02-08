@@ -15,7 +15,7 @@
 
         <groups>
             <run>
-                <include name="Api"/>
+                <include name="UI"/>
                 <exclude name="Broken"/>
             </run>
         </groups>

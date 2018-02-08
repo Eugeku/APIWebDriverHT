@@ -1,7 +1,6 @@
 package com.epam.kuzora.hometask.model.bean.fakerestapi;
 
 public class Book {
-
     private Integer ID;
     private String Title;
     private String Description;
@@ -9,6 +8,7 @@ public class Book {
     private String Excerpt;
     private String PublishDate;
 
+    // additional fields for another API's
     public Integer getID() {
         return ID;
     }

@@ -50,7 +50,7 @@ public class DriverFactory {
         String pathToChomeDriver;
         String os = System.getProperty("os.name").toLowerCase();
         if (os.contains("mac")) {
-            pathToChomeDriver = System.getProperty("user.dir") + "/chromedriverj";
+            pathToChomeDriver = System.getProperty("user.dir") + "/chromedriver";
         } else {
             pathToChomeDriver = System.getProperty("user.dir") + "\\chromedriver.exe";
         }
