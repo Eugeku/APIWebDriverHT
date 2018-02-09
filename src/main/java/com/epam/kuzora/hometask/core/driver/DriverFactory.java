@@ -1,7 +1,9 @@
 package com.epam.kuzora.hometask.core.driver;
 
+import com.epam.kuzora.hometask.core.constant.Constants.Driver;
 import com.epam.kuzora.hometask.core.driver.impl.ChromeDriverImpl;
 import org.openqa.selenium.WebDriver;
+
 
 public class DriverFactory {
     private static final DriverFactory instance = new DriverFactory();
@@ -47,13 +49,13 @@ public class DriverFactory {
     */
 
     public WebDriver getChromeDriver() {
-        String pathToChomeDriver;
-        String os = System.getProperty("os.name").toLowerCase();
-        if (os.contains("mac")) {
-            pathToChomeDriver = System.getProperty("user.dir") + "/chromedriver";
+        String pathToChromeDriver;
+        String os = System.getProperty(Driver.OS_NAME).toLowerCase();
+        if (os.contains(Driver.OS_TYPE)) {
+            pathToChromeDriver = System.getProperty(Driver.USER_DIR) + Driver.CHROME_DRIVER_NAME_MAC;
         } else {
-            pathToChomeDriver = System.getProperty("user.dir") + "\\chromedriver.exe";
+            pathToChromeDriver = System.getProperty(Driver.USER_DIR) + Driver.CHROME_DRIVER_NAME_WIN;
         }
-        return ChromeDriverImpl.getInstance(pathToChomeDriver);
+        return ChromeDriverImpl.getInstance(pathToChromeDriver);
     }
 }

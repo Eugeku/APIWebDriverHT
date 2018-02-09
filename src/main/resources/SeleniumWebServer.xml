@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="WebDriverSuite">
-
-    <parameter name="SpecifiedBookNameForSearch" value="Book 4"/>
+<suite name="APIWebDriverHT">
 
     <listeners>
         <listener class-name="com.epam.kuzora.hometask.core.listener.annotation_transformer.AnnotationTransformer"/>
@@ -10,18 +8,17 @@
         <listener class-name="com.epam.kuzora.hometask.core.listener.test_listener.TestListener"/>
     </listeners>
 
-
-    <test verbose="2" name="WebDriverTest">
+    <test verbose="2" name="APIWebDriverHTTest">
 
         <groups>
             <run>
-                <include name="UI"/>
+                <include name="Api"/> <!--Api, Debug, UI, Full, Smoke-->
                 <exclude name="Broken"/>
             </run>
         </groups>
 
         <packages>
-            <package name="com.epam.kuzora.hometask.tests.*"/>
+            <package name="com.epam.kuzora.hometask.tests.*"/> <!--Path to tests-->
         </packages>
 
     </test>

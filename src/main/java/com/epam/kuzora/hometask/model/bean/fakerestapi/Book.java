@@ -8,7 +8,6 @@ public class Book {
     private String Excerpt;
     private String PublishDate;
 
-    // additional fields for another API's
     public Integer getID() {
         return ID;
     }

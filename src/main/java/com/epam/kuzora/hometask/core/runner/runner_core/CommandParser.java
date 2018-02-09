@@ -1,6 +1,6 @@
 package com.epam.kuzora.hometask.core.runner.runner_core;
 
-import com.epam.kuzora.hometask.core.constant.RunnerConstants;
+import com.epam.kuzora.hometask.core.constant.Constants.Runner;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -13,7 +13,7 @@ public class CommandParser {
     }
 
     public ArrayList<String> parse(String request) {
-        Pattern pattern = Pattern.compile(RunnerConstants.COMMAND_PARSER_REG_EXP);
+        Pattern pattern = Pattern.compile(Runner.COMMAND_PARSER_REG_EXP);
         Matcher matcher = pattern.matcher(request);
         ArrayList<String> arrayList = new ArrayList<>();
         while (matcher.find()) {

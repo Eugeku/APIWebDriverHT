@@ -6,6 +6,7 @@ import com.epam.kuzora.hometask.service.ServiceHelper;
 import com.epam.kuzora.hometask.service.api.command.fakerestapi.book.GetListsOfBooks;
 import com.epam.kuzora.hometask.service.util.JsonParser;
 import com.epam.kuzora.hometask.tests.BaseAPITest;
+import com.epam.kuzora.hometask.tests.common.constant.TestConstant.TestMessages;
 import com.epam.kuzora.hometask.tests.common.constant.TestConstant.Props;
 import com.epam.kuzora.hometask.tests.common.constant.TestConstant.TestGroup;
 import com.epam.kuzora.hometask.tests.common.constant.TestConstant.TestValues;
@@ -32,14 +33,14 @@ public class APIGetBookMethodTest extends BaseAPITest {
         String expected = gsonParser.parseListIntoJson(list, Book.class);
 
         // check without schema
-        Assert.assertEquals(actual, expected, TestValues.SCHEMA_NOT_VALID_MES);
+        Assert.assertEquals(actual, expected, TestMessages.SCHEMA_NOT_VALID_MES);
 
         String actuaLBook = apiServiceHelper.getEntityAsString(TestValues.GET_BOOKS + bookId);
         Book book = gsonParser.parseJsonIntoObject(actuaLBook, Book.class);
         String expected2 = gsonParser.parseObjectIntoJson(book, Book.class);
 
         // check without schema
-        Assert.assertEquals(actuaLBook, expected2, TestValues.SCHEMA_NOT_VALID_MES);
+        Assert.assertEquals(actuaLBook, expected2, TestMessages.SCHEMA_NOT_VALID_MES);
 
         // validate book json with schema from file
         Assert.assertTrue(serviceHelper.isGsonValidWithSchemaFromFile(Props.PATH_TO_JSON_SCHEMA, actuaLBook));
@@ -53,8 +54,8 @@ public class APIGetBookMethodTest extends BaseAPITest {
             .body();
 
         // check specified book name in list
-        Assert.assertTrue(serviceHelper.findBookInListByName(listsOfBooks, TestValues.SPECIFIED_BOOK_NAME),
-            TestValues.SPECIFIED_BOOK_WAS_NOT_FOUND);
+        Assert.assertTrue(serviceHelper.findBookInListByName(listsOfBooks, TestValues.SPECIFIED_BOOK_NAME_API),
+            TestMessages.SPECIFIED_BOOK_WAS_NOT_FOUND);
     }
 
     @Test(groups = {TestGroup.FULL, TestGroup.API, TestGroup.SMOKE})
