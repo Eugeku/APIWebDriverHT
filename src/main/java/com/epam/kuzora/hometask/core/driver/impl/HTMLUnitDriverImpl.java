@@ -5,19 +5,19 @@ import com.gargoylesoftware.htmlunit.BrowserVersion;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class HTMLUnitDriverImpl implements HTMLUnitDriverInterface {
-    private static HtmlUnitDriver instance;
+    private HtmlUnitDriver instance;
 
-    private HTMLUnitDriverImpl() {
+    public HTMLUnitDriverImpl() {
     }
 
-    public static HtmlUnitDriver getInstance() {
+    public HtmlUnitDriver getInstance() {
         if (instance == null) {
             instance = new HtmlUnitDriver();
         }
         return instance;
     }
 
-    public static HtmlUnitDriver getInstance(BrowserVersion browserVersion) {
+    public HtmlUnitDriver getInstance(BrowserVersion browserVersion) {
         if (instance == null) {
             instance = new HtmlUnitDriver(browserVersion);
         }

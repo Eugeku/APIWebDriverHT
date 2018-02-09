@@ -5,6 +5,7 @@ import com.epam.kuzora.hometask.core.runner.runner_core.command.exception.Comman
 import com.epam.kuzora.hometask.core.runner.runner_core.command.impl.ClassTestCommand;
 import com.epam.kuzora.hometask.core.runner.runner_core.command.impl.RunnerInfo;
 import com.epam.kuzora.hometask.core.runner.runner_core.command.impl.XmlSuiteCommand;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,8 +33,9 @@ public class CommandProvider {
         } catch (IllegalArgumentException | NullPointerException e) {
             throw new CommandException(e.getMessage(), e);
         }
-        if (command == null)
+        if (command == null) {
             command = commandList.get(CommandName.RUNNER_INFO);
+        }
         return command;
     }
 }

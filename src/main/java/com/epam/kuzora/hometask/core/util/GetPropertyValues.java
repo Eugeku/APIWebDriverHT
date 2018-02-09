@@ -1,10 +1,10 @@
 package com.epam.kuzora.hometask.core.util;
 
-import java.io.*;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.Properties;
 
 public class GetPropertyValues {
-
     public String getPropValues(String propertyName, String propFileName) {
         String result = "";
         try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream(propFileName)) {

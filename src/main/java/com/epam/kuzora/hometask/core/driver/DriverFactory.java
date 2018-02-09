@@ -4,7 +4,6 @@ import com.epam.kuzora.hometask.core.constant.Constants.Driver;
 import com.epam.kuzora.hometask.core.driver.impl.ChromeDriverImpl;
 import org.openqa.selenium.WebDriver;
 
-
 public class DriverFactory {
     private static final DriverFactory instance = new DriverFactory();
 
@@ -56,6 +55,7 @@ public class DriverFactory {
         } else {
             pathToChromeDriver = System.getProperty(Driver.USER_DIR) + Driver.CHROME_DRIVER_NAME_WIN;
         }
-        return ChromeDriverImpl.getInstance(pathToChromeDriver);
+        ChromeDriverImpl chromeDriver = new ChromeDriverImpl();
+        return chromeDriver.getInstance(pathToChromeDriver);
     }
 }

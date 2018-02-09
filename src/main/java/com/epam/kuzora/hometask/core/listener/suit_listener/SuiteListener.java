@@ -2,6 +2,7 @@ package com.epam.kuzora.hometask.core.listener.suit_listener;
 
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
+
 import static com.epam.kuzora.hometask.core.util.Logger.logInConsole;
 
 public class SuiteListener implements ISuiteListener {
@@ -19,7 +20,8 @@ public class SuiteListener implements ISuiteListener {
 
     @Override
     public void onFinish(ISuite iSuite) {
-        String logMessage = String.format("%s: %s; %s: %s\n\r", SUITE_NAME, iSuite.getName(), SUITE_STATUS, STATUS_FINISH_SUITE);
+        String logMessage = String.format("%s: %s; %s: %s\n\r", SUITE_NAME, iSuite.getName(), SUITE_STATUS,
+            STATUS_FINISH_SUITE);
         logInConsole(logMessage);
     }
 }

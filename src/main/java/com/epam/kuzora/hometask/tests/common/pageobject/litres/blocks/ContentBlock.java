@@ -24,7 +24,9 @@ public class ContentBlock extends BaseBlock {
             String p = price.getAttribute("textContent");
             p = p.replaceAll("[^0-9,.]+", "").replaceFirst(",", ".");
             double ip = Double.parseDouble(p);
-            if (ip > maxPrice) maxPrice = ip;
+            if (ip > maxPrice) {
+                maxPrice = ip;
+            }
         }
         return maxPrice;
     }
@@ -49,5 +51,4 @@ public class ContentBlock extends BaseBlock {
         }
         return listBooks;
     }
-
 }

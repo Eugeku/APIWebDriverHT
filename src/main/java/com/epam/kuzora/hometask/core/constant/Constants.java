@@ -16,10 +16,7 @@ public class Constants {
 
         interface ChromeOption {
             String TEST_TYPE = "test-type";
-            String DISABLE_POPUP_BLOCKING ="disable-popup-blocking";
+            String DISABLE_POPUP_BLOCKING = "disable-popup-blocking";
         }
     }
-
-
-
 }

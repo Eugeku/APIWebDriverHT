@@ -4,6 +4,7 @@ import com.epam.kuzora.hometask.core.listener.annotation_transformer.AnnotationT
 import com.epam.kuzora.hometask.core.listener.suit_listener.SuiteListener;
 import com.epam.kuzora.hometask.core.listener.test_listener.TestListener;
 import org.testng.ITestNGListener;
+
 import java.util.ArrayList;
 
 public class ListenerHandler {

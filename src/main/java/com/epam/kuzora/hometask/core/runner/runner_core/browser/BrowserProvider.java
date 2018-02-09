@@ -2,6 +2,7 @@ package com.epam.kuzora.hometask.core.runner.runner_core.browser;
 
 import com.epam.kuzora.hometask.core.runner.runner_core.browser.exception.BrowserException;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,8 +30,9 @@ public class BrowserProvider {
         } catch (IllegalArgumentException | NullPointerException e) {
             throw new BrowserException(e.getMessage(), e);
         }
-        if (browserVersion == null)
+        if (browserVersion == null) {
             browserVersion = browserList.get(BrowserVersion.FIREFOX_52);
+        }
         return browserVersion;
     }
 }

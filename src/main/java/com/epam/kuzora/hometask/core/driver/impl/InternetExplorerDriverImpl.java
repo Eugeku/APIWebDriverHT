@@ -4,12 +4,12 @@ import com.epam.kuzora.hometask.core.driver.ifaces.InternetExplorerDriverInterfa
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class InternetExplorerDriverImpl implements InternetExplorerDriverInterface {
-    private static final InternetExplorerDriver instance = new InternetExplorerDriver();
+    private InternetExplorerDriver instance = new InternetExplorerDriver();
 
-    private InternetExplorerDriverImpl() {
+    public InternetExplorerDriverImpl() {
     }
 
-    public static InternetExplorerDriver getInstance() {
+    public InternetExplorerDriver getInstance() {
         return instance;
     }
 }

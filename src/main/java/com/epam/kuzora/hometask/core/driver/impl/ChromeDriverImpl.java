@@ -8,21 +8,19 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class ChromeDriverImpl implements ChromeDriverInterface {
-    private static ChromeDriver instance;
+    private ChromeDriver instance;
 
-    private ChromeDriverImpl() {
+    public ChromeDriverImpl() {
     }
 
-    public static WebDriver getInstance(String pathToChromeDriver) {
-        if (instance == null) {
-            ChromeOptions options = new ChromeOptions();
-            options.addArguments(Driver.ChromeOption.TEST_TYPE);
-            options.addArguments(Driver.ChromeOption.DISABLE_POPUP_BLOCKING);
-            DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-            capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-            instance = new ChromeDriver(capabilities);
-            System.setProperty(Driver.WEBDR_CHROME_DRIVER, pathToChromeDriver);
-        }
+    public WebDriver getInstance(String pathToChromeDriver) {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments(Driver.ChromeOption.TEST_TYPE);
+        options.addArguments(Driver.ChromeOption.DISABLE_POPUP_BLOCKING);
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+        instance = new ChromeDriver(capabilities);
+        System.setProperty(Driver.WEBDR_CHROME_DRIVER, pathToChromeDriver);
         return instance;
     }
 }

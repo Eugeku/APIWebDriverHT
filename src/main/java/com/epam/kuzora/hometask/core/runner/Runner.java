@@ -11,7 +11,6 @@ import com.epam.kuzora.hometask.core.runner.runner_core.command.impl.RunnerInfo;
 import java.util.ArrayList;
 
 public class Runner {
-
     public static void main(String[] args) {
         /*
         Run with jar file:
@@ -46,8 +45,8 @@ public class Runner {
         //        WebDriver webBrowser = DriverFactory.getInstance().getHtmlUnitDriver(browserVersion);
         //        WebBrowserGoogleTest.setDriver(webBrowser);
         //        BrowserVersion browserVersion = BrowserProvider.getInstance().getBrowser(browserVersionName);
-//        WebDriver webBrowser = DriverFactory.getInstance().getChromeDriver();
-//        BaseTest.setDriver(webBrowser);
+        //        WebDriver webBrowser = DriverFactory.getInstance().getChromeDriver();
+        //        BaseTest.setDriver(webBrowser);
         requestAfterParse.remove(0);
         requestAfterParse.remove(0);
         executionCommand = CommandProvider.getInstance().getCommand(commandName);

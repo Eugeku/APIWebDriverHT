@@ -22,9 +22,12 @@ public class TestConstant {
     }
 
     public interface TestValues {
-        String SPECIFIED_BOOK_NAME_API = getPropertyValues.getPropValues("specifiedBookName", TEST_PARAMETERS_PROPERTIES);
-        String SPECIFIED_BOOK_NAME_UI_1 = getPropertyValues.getPropValues("specifiedBookNameUI1", TEST_PARAMETERS_PROPERTIES);
-        String SPECIFIED_BOOK_NAME_UI_2 = getPropertyValues.getPropValues("specifiedBookNameUI2", TEST_PARAMETERS_PROPERTIES);
+        String SPECIFIED_BOOK_NAME_API = getPropertyValues.getPropValues("specifiedBookName",
+            TEST_PARAMETERS_PROPERTIES);
+        String SPECIFIED_BOOK_NAME_UI_1 = getPropertyValues.getPropValues("specifiedBookNameUI1",
+            TEST_PARAMETERS_PROPERTIES);
+        String SPECIFIED_BOOK_NAME_UI_2 = getPropertyValues.getPropValues("specifiedBookNameUI2",
+            TEST_PARAMETERS_PROPERTIES);
         String BASE_LITRES_URL = "https://www.litres.ru/";
         String BASE_GOOGLE_URL = "https://www.google.by";
         String GET_BOOKS = "api/Books/";

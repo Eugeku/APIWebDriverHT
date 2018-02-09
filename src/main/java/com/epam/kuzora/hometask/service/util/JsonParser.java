@@ -8,7 +8,6 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.List;
 
-
 public class JsonParser {
     public <T> List<T> parseJsonIntoList(String json, Class<T> klass) {
         Logger.logInConsole(String.format(LogMessages.PARSE_JSON_INTO_LIST, klass.getClass().getName()));
@@ -42,7 +41,7 @@ public class JsonParser {
         }
 
         public Type[] getActualTypeArguments() {
-            return new Type[]{wrapped};
+            return new Type[] {wrapped};
         }
 
         public Type getRawType() {

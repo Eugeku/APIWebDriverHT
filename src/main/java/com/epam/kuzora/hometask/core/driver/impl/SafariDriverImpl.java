@@ -4,12 +4,12 @@ import com.epam.kuzora.hometask.core.driver.ifaces.SafariDriverInterface;
 import org.openqa.selenium.safari.SafariDriver;
 
 public class SafariDriverImpl implements SafariDriverInterface {
-    private static final SafariDriver instance = new SafariDriver();
+    private SafariDriver instance = new SafariDriver();
 
-    private SafariDriverImpl() {
+    public SafariDriverImpl() {
     }
 
-    public static SafariDriver getInstance() {
+    public SafariDriver getInstance() {
         return instance;
     }
 }
