@@ -23,7 +23,6 @@ public class StartGooglePage extends BasePage {
             buttonConfirmName.isDisplayed();
             return true;
         } catch (TimeoutException ec) {
-            System.out.println("Жопа!!");
             return false;
         }
     }
